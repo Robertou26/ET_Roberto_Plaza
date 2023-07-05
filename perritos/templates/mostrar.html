@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar</title>
+    {% load static %}
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/estilos.css' %}" rel="stylesheet">
+</head>
+<style>
+    .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+.buttons{
+display: flex;
+}
+.buttons a{
+text-decoration: none;
+font-size: 25px;
+background-color:darkslategrey;
+color: white;
+border-radius: 50%;
+width: 35px;
+line-height: 35px;
+height: 35px;
+text-align: center;
+box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+transition: all .4s ease-in-out;
+margin-left: 6px;
+}
+.buttons a:hover {
+transform: scale(1.2);
+}
+.boton-login a{
+text-decoration: none;
+font-size: 40px;
+background-color: whitesmoke;
+color: black;
+border: 1px solid black;
+border-radius: 50%;
+width: 50px;
+line-height: 50px;
+height: 50px;
+text-align: center;
+box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+transition: all .4s ease-in-out;
+}
+.boton-login a:hover {
+transform: scale(1.2);
+}
+
+</style>
+<body style="background-image:url(https://st2.depositphotos.com/1106005/8592/i/600/depositphotos_85929920-stock-photo-black-and-white-doggy-tile.jpg); max-height: max-content;">
+    <div class="container">
+        <h2>Perritos</h2><br>
+
+        <div class="row" style="background-color: antiquewhite;">
+            {% for perro in caninos %}
+            <div class="col-12 col-md-4">
+                <div class="card text-center">
+                    {% if perro.imagen %}
+                        <img src="{{ perro.imagen.url }}" class="card-img-top mx-auto" style="width: 150px; height: 150px;">
+                    {% else %} 
+                        <img src="{% static 'img/sinfoto.webp' %}" class="card-img-top mx-auto">
+                    {% endif %}   
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            Codigo: {{ perro.id }}
+                        </h4>
+                        <p class="card-text">
+                            Marca: {{ perro.marca }}<br>
+                            Raza: {{ perro.raza }}<br>
+                        </p>
+                    </div>                     
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+<footer >     
+    <div class="row">   <!--creamos filas-->
+
+        <div class="col-sm">           <!--creamos columnas-->
+            <ul class="footer-menu-container"style="padding-left: 5px;">
+                <p class="contact">Contáctanos<p>
+                    <li class="menu-item">  +(56)986610328</li>
+                    <li class="menu-item">  +(56)245553213</li>
+                    <br>
+                <p class="contact2">Otros medios</p>
+                    <li class="menu-item">  ro.plaza@duocuc.cl</li>
+                    <li class="menu-item">  aeonfullyo@gmail.com</li>
+                    <div class="buttons" style="margin-top:7px">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-linkedin"></a>
+                        <a href="#" class="fa fa-youtube"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                    </section>
+            </ul>
+        </div>
+
+        <div class="col-sm">           <!--creamos columnas-->
+            <ul class="footer-menu-container"style="padding-left: 5px;">
+                <p class="contact">Información<p>
+                    <li class="menu-item"> Políticas de despacho </li>
+                    <li class="menu-item"> Como encontrarnos.</li>
+                    <li class="menu-item"> Medios de Pago</li>           
+            </ul>
+        </div>
+
+        <div class="col-sm">           <!--creamos columnas-->
+            <ul class="footer-menu-container"style="padding-left: 5px;">
+                <p class="contact">Otros<p>
+                    <li class="menu-item">  Horarios de atencion</li>
+                    <li class="menu-item">  Reclamos</li>
+                    <li class="menu-item">  Productos</li>
+            </ul>
+        </div>
+    </div> <!--cerramos row-->
+    
+</footer>
+<div class="container-fluid" style="background-color: black; height: 35px; margin-left: 0%;" >     <p style="color: white;">Copyright © Todos los derechos reservados.</p> </div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>          
+
+</html>
+{% endblock %}

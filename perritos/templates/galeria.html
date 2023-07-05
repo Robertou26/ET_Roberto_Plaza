@@ -1,0 +1,207 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="icon" href="{% static 'IMG/Logo'%}">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/estilos.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>Inicio</title>
+</head>
+<style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+    .buttons{
+display: flex;
+}
+.buttons a{
+text-decoration: none;
+font-size: 25px;
+background-color:darkslategrey;
+color: white;
+border-radius: 50%;
+width: 35px;
+line-height: 35px;
+height: 35px;
+text-align: center;
+box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+transition: all .4s ease-in-out;
+margin-left: 6px;
+}
+.buttons a:hover {
+transform: scale(1.2);
+}
+.boton-login a{
+text-decoration: none;
+font-size: 40px;
+background-color: whitesmoke;
+color: black;
+border: 1px solid black;
+border-radius: 50%;
+width: 50px;
+line-height: 50px;
+height: 50px;
+text-align: center;
+box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+transition: all .4s ease-in-out;
+}
+.boton-login a:hover {
+transform: scale(1.2);
+}
+    
+</style>
+<body style="background-image:url(https://st2.depositphotos.com/1106005/8592/i/600/depositphotos_85929920-stock-photo-black-and-white-doggy-tile.jpg); max-height: max-content;">
+
+        <div class="container-fluid" style="display: flex; padding: 50px; text-align: center; justify-content:center">
+            <h1 class="texto"></h1>
+            <br>
+            <div class="row" style="display: flex; justify-content: center; margin: 100px;" >   <!--creamos filas-->
+                <div class="col-lg-4" style="justify-content: center">
+                        <p style="font-size: 20px; font-family: 'Times New Roman', Times, serif; color: black;background-color: antiquewhite;">Alimentos de todos sabores</p>
+                        <div class="col-md" >           <!--creamos columnas-->
+                            <img src="{% static 'IMG/formula.jpg'%}" alt="" width="300px" height="150px" style="justify-content: center;">
+                    </div>
+                    <br>
+                    <div class="col-md">           <!--creamos columnas-->
+                            <img src="{% static 'IMG/master-dog.webp'%}" alt="" width="300px" height="150px" style="justify-content: center;">
+                    </div>
+                    <br>
+                    <div class="col-md">           <!--creamos columnas-->
+                        <img src="{% static 'IMGGal/ChampionDog.jpg'%}" alt="" width="300px" height="150px" style="justify-content: center;">
+                    </div>
+                    <br>
+                    <div class="col-md">           <!--creamos columnas-->
+                        <img src="{% static 'IMGGal/Doguitos.jpg' %}" alt="" width="300px" height="150px" style="justify-content: center;">
+                    </div>
+                    <br>
+                </div>
+                <div class="col-lg-4" style="justify-content: center">
+                    <p style="font-size: 20px; font-family: 'Times New Roman', Times, serif; color: black;background-color: antiquewhite;">Articulos de baño</p>
+                    <div class="col-md" >           <!--creamos columnas-->
+                        <img src="{% static 'IMG/baño1.jpg'%}" alt="" width="300px" height="150px" style="justify-content: center;">
+                   
+                    </div>
+                    <br>
+                    <div class="col-md">           <!--creamos columnas-->
+                            <img src="{% static 'IMGGal/baño.jpg'%}" alt="" width="300px" height="150px" style="justify-content: center;">
+                        
+                    </div>
+                    <br>
+                    <div class="col-md">           <!--creamos columnas-->
+                        <img src="{% static 'IMG/baño2.jpg'%}" alt="" width="300px" height="150px" style="justify-content: center;">
+                        
+                    </div>
+                    <br>
+                    <div class="col-md">           <!--creamos columnas-->
+                        <img src="{% static 'IMG/baño3.jpg' %}" alt="" width="300px" height="150px" style="justify-content: center;">
+                        
+                    </div>
+                    <br>
+                </div>
+                <div class="col-lg-4" style="justify-content: center">
+                    <p style="font-size: 20px; font-family: 'Times New Roman', Times, serif; color: black;background-color: antiquewhite;">Accesorios</p>
+                    <div class="col-md" >           <!--creamos columnas-->
+                        <img src="{% static 'IMGGal/Arnes.jpg'%}" alt="" width="300px" height="150px" style="justify-content: center;">
+                   
+                </div>
+                <br>
+                <div class="col-md">           <!--creamos columnas-->
+                        <img src="{% static 'IMG/bozal.jpg'%}" alt="" width="300px" height="150px" style="justify-content: center;">
+                    
+                </div>
+                <br>
+                <div class="col-md">           <!--creamos columnas-->
+                    <img src="{% static 'IMG/gatocasa.jpg'%}" alt="" width="300px" height="150px" style="justify-content: center;">
+                    
+                </div>
+                <br>
+                <div class="col-md">           <!--creamos columnas-->
+                    <img src="{% static 'IMG/hamster.jpg' %}" alt="" width="300px" height="150px" style="justify-content: center;">
+                   
+                </div>
+                
+                    
+                </div>
+            </div>  <!--cerramos row-->
+        </div>
+</body>
+<script type="text/javascript">
+    let ubicacionInicial = window.pageYOffset;
+    window.onscroll = function () {
+        let ubicacionPosterior = window.pageYOffset;
+        if (ubicacionInicial >= ubicacionPosterior) {
+            document.getElementById("barraNav").style.top = "0";
+        }
+        else {
+            document.getElementById("barraNav").style.top = "-70px";
+        }
+        ubicacionInicial = ubicacionPosterior
+    }
+</script>
+<footer >     
+    <div class="row">   <!--creamos filas-->
+
+        <div class="col-sm-4">           <!--creamos columnas-->
+            <ul class="footer-menu-container"style="padding-left: 5px;">
+                <p class="contact">Contáctanos<p>
+                    <li class="menu-item">  +(56)986610328</li>
+                    <li class="menu-item">  +(56)245553213</li>
+                    <br>
+                <p class="contact2">Otros medios</p>
+                    <li class="menu-item">  ro.plaza@duocuc.cl</li>
+                    <li class="menu-item">  aeonfullyo@gmail.com</li>
+                    <div class="buttons" style="margin-top:7px">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-linkedin"></a>
+                        <a href="#" class="fa fa-youtube"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                    </section>
+            </ul>
+        </div>
+
+        <div class="col-sm-4">           <!--creamos columnas-->
+            <ul class="footer-menu-container"style="padding-left: 5px;">
+                <p class="contact">Información<p>
+                    <li class="menu-item"> Políticas de despacho </li>
+                    <li class="menu-item"> Como encontrarnos.</li>
+                    <li class="menu-item"> Medios de Pago</li>           
+            </ul>
+        </div>
+
+        <div class="col-sm-4">           <!--creamos columnas-->
+            <ul class="footer-menu-container"style="padding-left: 5px;">
+                <p class="contact">Otros<p>
+                    <li class="menu-item">  Horarios de atencion</li>
+                    <li class="menu-item">  Reclamos</li>
+                    <li class="menu-item">  Productos</li>
+            </ul>
+        </div>
+    </div> <!--cerramos row-->
+    
+</footer>
+<div class="container-fluid" style="background-color: black; height: 35px; margin-left: 0%;" >     <p style="color: white;">Copyright © Todos los derechos reservados.</p> </div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>          
+</html>
+{%endblock%}
